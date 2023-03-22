@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    @extend %montserrat-400;
+    color: $black;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.container {
+    max-width: 1550px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wrapper {
+    flex-grow: 1;
+}

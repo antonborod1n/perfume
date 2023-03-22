@@ -1,0 +1,52 @@
+/* COLOR */
+$accent: #8932B4;
+$accent-bg: #E4ADFF;
+$black: #151515;
+$text: #4A4A4A;
+$subtext: #0E0E0E;
+$green: #72D263;
+$white: #FAFAFA;
+
+/* FONTS */
+
+%montserrat-400 {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%montserrat-500 {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%montserrat-700 {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%i-400 {
+    font-family: 'Inter-Regular';
+    font-weight: 400;
+}
+
+%i-600 {
+    font-family: 'Inter-SemiBold';
+    font-weight: 600;
+}
+
+/* BUTTON */
+%btn {
+    @extend %montserrat-500;
+    display: block;
+    border-radius: 5px;
+    background-color: $accent;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &:hover {
+        transition: background-color .3s;
+        background-color: lighten($color: $accent, $amount: 10%);
+    }
+}
