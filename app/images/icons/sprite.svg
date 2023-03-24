@@ -11,4 +11,15 @@
     <symbol id="basket" viewBox="0 0 23 25" width="23" height="25">
         <svg width="23" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.111 6.61c2.485-7.296 9.939-7.661 12.778 0M1.277 6.304h20.445M0 23.133h23" stroke="#151515" stroke-width="1.733"/><path transform="matrix(-.0757 .99713 -.9983 -.05844 1.277 6.049)" stroke="#151515" stroke-width="1.733" d="M0-.867h16.878"/><path transform="matrix(.0757 .99713 .9983 -.05844 21.723 7.17)" stroke="#151515" stroke-width="1.733" d="M0-.867h16.878"/></svg>
     </symbol>
+    <symbol id="plus" viewBox="0 0 16 16" width="16" height="16">
+        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="#151515"/>
+            <line x1="8" y1="15.5" x2="8" y2="0.5" stroke="#151515"/>
+        </svg>
+    </symbol>
+    <symbol id="minus" viewBox="0 0 16 1" width="16" height="1">
+        <svg width="16" height="1" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="0.5" x2="15.5" y2="0.5" stroke="#151515"/>
+        </svg>
+    </symbol>
 </svg>

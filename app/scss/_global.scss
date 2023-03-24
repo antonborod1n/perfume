@@ -27,3 +27,204 @@ body {
 .wrapper {
     flex-grow: 1;
 }
+
+/* SWIPPER */
+
+.slider-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+.slider-btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static !important;
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    transition: fill .3s;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000000;
+    width: 24px;
+    height: 4px;
+    border-radius: 50%;
+    transition: all .3s ease 0s;
+}
+
+/* BREADCRUMBS */
+
+.breadcrumbs {
+    padding-bottom: 60px;
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 25px;
+        color: $text;
+        cursor: pointer;
+
+        &:last-child {
+            cursor: default;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icons/breadcrumbs-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            top: 7px;
+            right: -15px;
+            width: 6px;
+            height: 10px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+
+        &-last {
+            color: $text;
+            font-size: 13px;
+            line-height: 18px;
+            cursor: default;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        opacity: 0.7;
+
+        &:hover {
+            color: $accent;
+            transition: color .3s;
+        }
+
+        &-last:hover {
+            color: $text;
+        }
+    }
+}
+
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px 120px;
+    gap: 48px;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__arrows {
+        @extend %montserrat-500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+        transition: opacity .3s;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        &.no-active {
+            transition: opacity .3s;
+            opacity: 0.7;
+        }
+    }
+
+    &__link {
+        @extend %montserrat-500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+        transition: color .3s;
+        padding: 8px 16px;
+        width: 39px;
+        height: 38px;
+        border-radius: 5px;
+
+        &.active {
+            background-color: #8932B4;
+            color: #FAFAFA;
+        }
+    }
+}
+
+/* QUANTITY */
+
+.quantity {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px 25px;
+    width: 172px;
+    height: 50px;
+    border: 1px solid $black;
+    border-radius: 5px;
+    margin-bottom: 12px;
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &-input input {
+        width: 35px;
+        border: none;
+        height: 38px;
+        background: transparent;
+        outline: none;
+        font-size: 18px;
+        line-height: 82%;
+        color: $black;
+        text-align: center;
+    }
+}
