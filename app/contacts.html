@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -105,7 +105,106 @@
         </header>
 
         <div class="wrapper">
+            <section class="contact">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
 
+                    <div class="contact__inner">
+                        <div class="contact__info">
+                            <h1 class="contact__title">Контакты</h1>
+
+                            <ul class="contact__list">
+                                <li class="contact__item">
+                                    <a class="contact__link-social link-location" href="#" target="_blank">
+                                        Казахстан, город Алматы, БЦ Capital Tower
+                                    </a>
+                                </li>
+                                <li class="contact__item">
+                                    <a class="contact__link-social link-phone" href="tel:+77476777549" target="_blank">
+                                        +7 (747) 677-75-49
+                                    </a>
+                                </li>
+                                <li class="contact__item">
+                                    <a class="contact__link-social link-watsapp" href="#" target="_blank">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                                <li class="contact__item">
+                                    <a class="contact__link-social link-inst" href="#" target="_blank">
+                                        Инстаграм
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contact__form-box">
+                            <h2 class="contact__form-title">Обратная связь</h2>
+                            <p class="form__text contact__form-text">Мы свяжемся с вами и ответим на любые вопросы!</p>
+                            <form class="contact__form" action="#">
+                                <div class="contact__form-inputs">
+                                    <input class="contact__form-input" type="text" id="faq-name" placeholder="Ваше имя">
+                                    <input class="contact__form-input" type="tel" id="faq-phone" placeholder="Телефон">
+                                </div>
+                                <button class="form__btn form__btn-submit-login" type="submit">Отправить</button>
+                                <p class="form__text">
+                                    Нажимая на кнопку «Оформить заказ»,
+                                    вы принимаете условия <a href="#">Публичной оферты</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="contact__map">
+                        <img class="contact__map-img" src="./images/content/map.webp" alt="Map">
+                    </div>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                    <div class="advantages__inner">
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                FREE
+                            </div>
+                            <p class="advantages__text">
+                                Бесплатная доставка от 200.000 ₸
+                            </p>
+                        </div>
+
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                FREE
+                            </div>
+                            <p class="advantages__text">
+                                Гарантия качества
+                            </p>
+                        </div>
+
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                KZ
+                            </div>
+                            <p class="advantages__text">
+                                Доставка по всему Казахстану и СНГ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer class="footer">

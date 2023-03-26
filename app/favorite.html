@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <button class="burger">
+                            <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                            </svg>
+                        </button>
+
+                        <div class="header__location">
+                            <span class="location-item app-location">Ваш город</span>
+                            <div class="modal-location">
+                                <a class="location-item" href="#">Алматы</a>
+                                <a class="location-item" href="#">Астана</a>
+                                <a class="location-item" href="#">Костанай</a>
+                                <a class="location-item" href="#">Казахстан</a>
+                                <a class="location-item" href="#">Россия</a>
+                            </div>
+                        </div>
+
+                        <a class="logo" href="#">
+                            <img class="logo-img" src="../images/logo.webp" alt="Logo">
+                        </a>
+
+                        <ul class="user-nav">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup">
+                                        <input class="search__input" type="text" placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section class="favorite">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Избранное
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="favorite__product-box">
+                        <h1 class="favorite__title">Избранное</h1>
+                        <div class="favorite__product-panel">
+                            <form class="favorite__form" action="#">
+                                <div class="favorite__form-box">
+                                    <div class="favorite__form-search-box">
+                                        <button class="favorite__form-search-btn" type="submit"></button>
+                                        <input class="favorite__form-search-input" type="search"
+                                            placeholder="Введите название бренда...">
+                                    </div>
+
+                                    <label class="favorite__form-label favorite__form-label-stock" for="stock">
+                                        <input type="checkbox" id="stock">
+                                        Снова в наличии
+                                    </label>
+                                </div>
+
+                                <label class="favorite__form-label favorite__form-label-sort" for="sort">
+                                    Сортировать:
+                                    <select class="favorite__form-input favorite__form-input-arrow" id="sort">
+                                        <option value="popularity">популярности</option>
+                                        <option value="price">цене</option>
+                                    </select>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="favorite__product">
+                            <div class="product__item">
+                                <div class="product__item-box">
+                                    <a class="product__img-link" href="#">
+                                        <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                    </a>
+                                    <div class="catalog__item-row">
+                                        <a class="favor-link product__favor-link" href="#">
+                                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                    stroke="#000" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product__info">
+                                    <div class="product__title-box">
+                                        <h3 class="product__title">
+                                            <a class="catalog__title-link" href="#">
+                                                Kismet For Men (Lattafa)
+                                            </a>
+                                        </h3>
+                                        <div class="product__category">Мужская парфюмерия</div>
+                                    </div>
+                                    <div class="product__price-box">
+                                        <div class="catalog__price">4 398<span>₸</span></div>
+                                        <div class="product__stock">В наличии</div>
+                                    </div>
+                                    <button class="product__btn">В корзину</button>
+                                </div>
+                            </div>
+
+                            <div class="product__item">
+                                <div class="product__item-box">
+                                    <a class="product__img-link" href="#">
+                                        <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                    </a>
+                                    <div class="catalog__item-row">
+                                        <a class="favor-link product__favor-link" href="#">
+                                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                    stroke="#000" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product__info">
+                                    <div class="product__title-box">
+                                        <h3 class="product__title">
+                                            <a class="catalog__title-link" href="#">
+                                                Kismet For Men (Lattafa)
+                                            </a>
+                                        </h3>
+                                        <div class="product__category">Мужская парфюмерия</div>
+                                    </div>
+                                    <div class="product__price-box">
+                                        <div class="catalog__price">4 398<span>₸</span></div>
+                                        <div class="product__stock">В наличии</div>
+                                    </div>
+                                    <button class="product__btn">В корзину</button>
+                                </div>
+                            </div>
+
+                            <div class="product__item">
+                                <div class="product__item-box">
+                                    <a class="product__img-link" href="#">
+                                        <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                    </a>
+                                    <div class="catalog__item-row">
+                                        <a class="favor-link product__favor-link" href="#">
+                                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                    stroke="#000" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product__info">
+                                    <div class="product__title-box">
+                                        <h3 class="product__title">
+                                            <a class="catalog__title-link" href="#">
+                                                Kismet For Men (Lattafa)
+                                            </a>
+                                        </h3>
+                                        <div class="product__category">Мужская парфюмерия</div>
+                                    </div>
+                                    <div class="product__price-box">
+                                        <div class="catalog__price">4 398<span>₸</span></div>
+                                        <div class="product__stock">В наличии</div>
+                                    </div>
+                                    <button class="product__btn">В корзину</button>
+                                </div>
+                            </div>
+
+                            <div class="product__item">
+                                <div class="product__item-box">
+                                    <a class="product__img-link" href="#">
+                                        <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                    </a>
+                                    <div class="catalog__item-row">
+                                        <a class="favor-link product__favor-link" href="#">
+                                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                    stroke="#000" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product__info">
+                                    <div class="product__title-box">
+                                        <h3 class="product__title">
+                                            <a class="catalog__title-link" href="#">
+                                                Kismet For Men (Lattafa)
+                                            </a>
+                                        </h3>
+                                        <div class="product__category">Мужская парфюмерия</div>
+                                    </div>
+                                    <div class="product__price-box">
+                                        <div class="catalog__price">4 398<span>₸</span></div>
+                                        <div class="product__stock">В наличии</div>
+                                    </div>
+                                    <button class="product__btn">В корзину</button>
+                                </div>
+                            </div>
+
+                            <div class="product__item">
+                                <div class="product__item-box">
+                                    <a class="product__img-link" href="#">
+                                        <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                    </a>
+                                    <div class="catalog__item-row">
+                                        <a class="favor-link product__favor-link" href="#">
+                                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                    stroke="#000" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product__info">
+                                    <div class="product__title-box">
+                                        <h3 class="product__title">
+                                            <a class="catalog__title-link" href="#">
+                                                Kismet For Men (Lattafa)
+                                            </a>
+                                        </h3>
+                                        <div class="product__category">Мужская парфюмерия</div>
+                                    </div>
+                                    <div class="product__price-box">
+                                        <div class="catalog__price">4 398<span>₸</span></div>
+                                        <div class="product__stock">В наличии</div>
+                                    </div>
+                                    <button class="product__btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper product-slider">
+                        <div class="slider-box">
+                            <h2 class="product__title-top">Вам может понравиться</h2>
+                            <div class="slider-btn-box">
+                                <div class="swiper-button-prev">
+                                    <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <line y1="-1" x2="19.5256" y2="-1"
+                                            transform="matrix(-0.768221 -0.640184 -0.768221 0.640185 15 25)"
+                                            stroke="#151515" stroke-width="2" />
+                                        <line y1="-1" x2="19.5256" y2="-1"
+                                            transform="matrix(-0.768221 0.640185 -0.768221 -0.640184 15 0)"
+                                            stroke="#151515" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <line y1="-1" x2="19.5256" y2="-1"
+                                            transform="matrix(0.768221 0.640185 0.768221 -0.640184 2 0)"
+                                            stroke="#151515" stroke-width="2" />
+                                        <line y1="-1" x2="19.5256" y2="-1"
+                                            transform="matrix(0.768221 -0.640184 0.768221 0.640185 2 25)"
+                                            stroke="#151515" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="product__item">
+                                    <div class="product__item-box">
+                                        <a class="product__img-link" href="#">
+                                            <img class="product__item-img" src="./images/goods/1.webp" alt="Product">
+                                        </a>
+                                        <div class="product__item-row">
+                                            <span class="product__new">New</span>
+                                            <a class="favor-link product__favor-link" href="#">
+                                                <svg width="26" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                        stroke="#000" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__info">
+                                        <div class="product__title-box">
+                                            <h3 class="product__title">
+                                                <a class="product__title-link" href="#">
+                                                    Kismet For Men (Lattafa)
+                                                </a>
+                                            </h3>
+                                            <div class="product__category">Мужская парфюмерия</div>
+                                        </div>
+                                        <div class="product__price-box">
+                                            <div class="product__price">4 398<span>₸</span></div>
+                                            <div class="product__stock">В наличии</div>
+                                        </div>
+                                        <button class="product__btn">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__logo-img" src="./images/footer-logo.webp" alt="Logo">
+                    </a>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            МЕНЮ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Часто задаваемые вопросы
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            ИНФОРМАЦИЯ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Акции и скидки
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Скачать прайс-лист
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            КОНТАКТЫ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-phone" href="tel:+77476777549">
+                                +7 (747) 677-75-49
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-watsapp" href="#" target="_blank">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-inst" href="#" target="_blank">
+                                Инстаграм
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                    <p class="footer__text">© 2023 Perfume Optom Kazakhstan</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
