@@ -1231,6 +1231,7 @@ a.form__text-link {
 
 //LOGIN1, LOGIN2, REGISTRATION1, REGISTRATION2, REGISTRATION3
 
+
 .login,
 .registration {
     max-width: 487px;
@@ -1246,396 +1247,458 @@ a.form__text-link {
     margin-bottom: 32px;
 }
 
-.form__login {}
+.form {
+    &__label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
 
-
-.registration__text {
-    @extend %montserrat-500;
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 82%;
-    color: #6C6C6C;
-
-    &-decor {
-        color: $accent;
-        text-decoration-line: underline;
-        transition: color .3s;
+    &__select {
+        width: 120px;
+        background-image: url(../images/icons/arrow-bottom-select.svg);
+        background-repeat: no-repeat;
+        background-position: 75% center;
+        padding: 20px;
         cursor: pointer;
+    }
+
+    &__input {
+        appearance: none;
+        @extend %montserrat-500;
+        font-size: 18px;
+        line-height: 82%;
+        width: 100%;
+        height: 75px;
+        outline: none;
+        opacity: 1;
+        padding: 30px;
+        border: 1px solid #6C6C6C;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding-right: 25px;
+        background-color: transparent;
+
+        &:focus {
+            border: 1px solid $accent;
+        }
+
+        &-arrow {
+            background-image: url(../images/icons/arrow-bottom-select.svg);
+            background-repeat: no-repeat;
+            background-position: 95% center;
+        }
+
+        &-registration:nth-child(1) {
+            width: 119px;
+        }
+
+        &-registration:nth-child(2) {
+            width: 100%;
+        }
+
+        &-box {
+            @extend %montserrat-500;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            width: 100%;
+            padding: 30px 34px;
+            border: 1px solid #6C6C6C;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+    }
+
+    &__btn {
+        @extend %btn;
+        @extend %montserrat-500;
+        width: 100%;
+        height: 70px;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 82%;
+
+        &-submit-login {
+            margin-bottom: 8px;
+        }
+
+        &.form__btn-no-active {
+            opacity: 0.6;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        opacity: 0.5;
+
+        & a {
+            color: $black;
+            opacity: 1;
+            transition: opacity .3s;
+
+            &:hover {
+                transition: opacity .3s;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__error {
+        @extend %montserrat-500;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 82%;
+        color: $accent;
+        margin-bottom: 15px;
+    }
+
+    &__change {
+        &-phone {
+            @extend %montserrat-500;
+            font-size: 18px;
+            line-height: 82%;
+            color: $accent;
+        }
+
+        &-number {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+            line-height: 82%;
+
+            & span:nth-child(1) {
+                color: $accent;
+                font-size: 28px;
+                line-height: 82%;
+            }
+
+
+            & span:nth-child(2) {
+                color: $black;
+            }
+        }
+    }
+}
+
+.registration {
+    &__text {
+        @extend %montserrat-500;
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 82%;
+        color: #6C6C6C;
+
+        &-decor {
+            color: $accent;
+            text-decoration-line: underline;
+            transition: color .3s;
+            cursor: pointer;
+
+            &:hover {
+                transition: color .3s;
+                color: lighten($color: $accent, $amount: 10%);
+            }
+        }
+
+        & .phone {
+            color: $black;
+        }
+
+        & .timer {
+            color: $accent
+        }
+    }
+
+    &__pagimation-prev {
+        display: inline-block;
+        @extend %montserrat-500;
+        font-size: 18px;
+        line-height: 82%;
+        color: #222222;
+        margin-bottom: 40px;
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 40px;
+
+        &::before {
+            content: url(../images/icons/arrow-prev.svg);
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: color .3s;
+        }
 
         &:hover {
             transition: color .3s;
-            color: lighten($color: $accent, $amount: 10%);
-        }
-    }
-
-    & .phone {
-        color: $black;
-    }
-
-    & .timer {
-        color: $accent
-    }
-}
-
-.form__input {
-    appearance: none;
-    @extend %montserrat-500;
-    font-size: 18px;
-    line-height: 82%;
-    width: 100%;
-    height: 75px;
-    outline: none;
-    opacity: 1;
-    padding: 30px;
-    border: 1px solid #6C6C6C;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    padding-right: 25px;
-    background-color: transparent;
-
-    &:focus {
-        border: 1px solid $accent;
-    }
-}
-
-.form__error {
-    @extend %montserrat-500;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 82%;
-    color: $accent;
-    margin-bottom: 15px;
-}
-
-.form__select {
-    width: 120px;
-    background-image: url(../images/icons/arrow-bottom-select.svg);
-    background-repeat: no-repeat;
-    background-position: 75% center;
-    padding: 20px;
-    cursor: pointer;
-}
-
-.form__input-arrow {
-    background-image: url(../images/icons/arrow-bottom-select.svg);
-    background-repeat: no-repeat;
-    background-position: 95% center;
-}
-
-.form__label {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-
-}
-
-.form__input-registration:nth-child(1) {
-    width: 119px;
-}
-
-.form__input-registration:nth-child(2) {
-    width: 100%;
-}
-
-.form__btn {
-    @extend %btn;
-    @extend %montserrat-500;
-    width: 100%;
-    height: 70px;
-    padding: 20px;
-    font-size: 20px;
-    line-height: 82%;
-}
-
-.form__btn-submit-login {
-    margin-bottom: 8px;
-}
-
-.form__btn.form__btn-no-active {
-    opacity: 0.6;
-}
-
-.form__text {
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    opacity: 0.5;
-
-    & a {
-        color: $black;
-        opacity: 1;
-        transition: opacity .3s;
-
-        &:hover {
-            transition: opacity .3s;
-            opacity: 0.5;
+            color: lighten($color: #222222, $amount: 30%);
         }
     }
 }
 
-.form__input-box {
-    @extend %montserrat-500;
+//ACCOUNT
+.account {
+    padding: 100px 0 120px;
+}
+
+.account__inner {
     display: flex;
-    flex-direction: column;
-    gap: 28px;
-    width: 100%;
-    padding: 30px 34px;
-    border: 1px solid #6C6C6C;
-    border-radius: 5px;
-    background-color: transparent;
+    justify-content: space-between;
+    column-gap: 158px;
 }
 
-.form__change-phone {
-    @extend %montserrat-500;
-    font-size: 18px;
-    line-height: 82%;
-    color: $accent;
-}
-
-.form__change-number {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 18px;
-    line-height: 82%;
-
-    & span:nth-child(1) {
-        color: $accent;
-        font-size: 28px;
-        line-height: 82%;
-    }
-
-
-    & span:nth-child(2) {
-        color: $black;
-    }
-}
-
-.registration__pagimation-prev {
-    display: inline-block;
-    @extend %montserrat-500;
-    font-size: 18px;
-    line-height: 82%;
-    color: #222222;
-    margin-bottom: 40px;
+.account__top {
     position: relative;
-    padding-left: 28px;
-    margin-bottom: 40px;
-
-    &::before {
-        content: url(../images/icons/arrow-prev.svg);
-        display: inline-block;
-        width: 8px;
-        height: 15px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        transition: color .3s;
-    }
-
-    &:hover {
-        transition: color .3s;
-        color: lighten($color: #222222, $amount: 30%);
-    }
+    width: 98px;
+    height: 85px;
+    margin-bottom: 51px;
 }
 
-/* .login,
-    .registration {
-    max-width: 716px;
-    margin: 0 auto;
-    padding: 144px 0;
-}
-
-.login__title,
-.registration__title {
-    margin-bottom: 40px;
-}
-
-.form__box-container {
-    margin-bottom: 24px;
-}
-
-.form__box-pass-repeat {
-    margin-top: 24px;
-}
-
-.form__box-pass {
-    margin-bottom: 8px;
-}
-
-.form__box-phone {
-    margin-bottom: 24px;
-}
-
-.form__label {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    opacity: 0.5;
-}
-
-.form__input {
-    @extend %montserrat-500;
-    width: 100%;
-    padding: 0px 8px 8px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #7a7a7a;
-    margin-top: 8px;
-    opacity: 1;
-    border-radius: 0px;
-
-    &::placeholder {
-        @extend %montserrat-500;
-        font-size: 16px;
-        line-height: 24px;
-        color: #000000;
-        opacity: 0.5;
-    }
-
-    &:focus {
-        border-bottom: 1px solid #000000;
-    }
-}
-
-.form__link {
-    display: block;
-    @extend %montserrat-500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    text-align: right;
-    opacity: 0.5;
-    transition: opacity .3s;
-
-    &:hover {
-        transition: opacity .3s;
-        opacity: 1;
-    }
-}
-
-.form__box {
-    margin-top: 32px;
-}
-
-.form__input-checkbox {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+.account__change-btn-foto {
     position: absolute;
-
-    &:checked+.form__input-checkbox-sqr {
-        background-color: #000000;
-    }
-
-    &:checked+.form__filter-checkbox-sqr {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    &:checked+.form__filter-text {
-        color: rgba(0, 0, 0, 0.5);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:checked+.form__goods-checkbox-text {
-        color: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(0, 0, 0, 0.5);
-    }
-}
-
-.form__input-checkbox-text {
-    margin-left: 24px;
-    cursor: pointer;
-}
-
-.form__goods-checkbox-text {
-    margin-left: 0;
-}
-
-.form__filter-text {
-    margin: 16px 24px 16px 0;
-    cursor: pointer;
-    transition: border-bottom .3s;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-
-    &:hover {
-        transition: border-bottom .3s;
-        border-bottom: 1px solid rgba(0, 0, 0, 1);
-    }
-}
-
-.form__input-checkbox-sqr {
-    position: absolute;
-    margin: 8px 0 0 8px;
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-}
-
-.form__filter-checkbox-sqr {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.form__filter-checkbox-text {
-    transition: color .3s;
-}
-
-.form__filter-checkbox-text:hover {
-    transition: color .3s;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.form__link-policy {
-    @extend %montserrat-500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-
-    &:hover {
-        transition: opacity .3s;
-        opacity: 0.5;
-    }
-}
-
-.form__btn {
-    border: none;
+    bottom: -25px;
+    right: -13px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    width: 100%;
-    height: 56px;
-    color: #FFFFFF;
-    background-color: #000000;
-    opacity: 0.2;
-    transition: opacity .3s;
+    width: 34px;
+    height: 31px;
+    background: $accent;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 8px;
+    border: none;
+}
 
-    &:hover {
-        transition: opacity .3s;
-        background-color: #000000;
-        opacity: 0.7;
+.form__account-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.form__account-input {
+    @extend %montserrat-500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #151515;
+    width: 358px;
+    height: 47px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #6C6C6C;
+    background-color: transparent;
+}
+
+.form__edit-box {
+    width: 358px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form__edit-title {
+    @extend %montserrat-500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.form__edit-content {
+    @extend %montserrat-500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.form__edit-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form__btn-submit-account {
+    width: 358px;
+}
+
+.account__history {
+    @extend %montserrat-500;
+    width: 616px;
+
+    &-order {
+        &-number {
+            font-size: 22px;
+            line-height: 82%;
+            color: $black;
+        }
+
+        &-data {
+            font-size: 16px;
+            line-height: 20px;
+            color: #00A200;
+
+            &-delivered {
+                color: $green;
+            }
+
+            &-canceled {
+                color: $canceled;
+            }
+        }
+
+        &-count {
+
+            color: #6C6C6C;
+        }
+
+        &-price {
+
+            color: $black;
+        }
     }
 
-    &:active {
-        transition: opacity .3s;
-        background-color: #000000;
-        opacity: 1;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &-title {
+        @extend %montserrat-500;
+        font-size: 22px;
+        line-height: 82%;
+        color: #222222;
+        margin-bottom: 40px;
+
+        &-numb {
+            color: $accent;
+        }
+    }
+
+    &-box-col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &-box-row {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    &-top-box {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &-img-box {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &-item-img {
+        width: 99px;
+        height: 115px;
+        object-fit: cover;
     }
 }
 
-.form__btn-submit-login {
-    margin-top: 24px;
+
+
+
+
+
+/* 
+.account__top {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
 }
- */
+
+.account__img {
+    width: 104px;
+    height: 104px;
+}
+
+.account__top-box {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+}
+
+.account__title {
+    @extend %montserrat-700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.account__change-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.account__user-info {
+    max-width: 744px;
+    margin-top: 40px;
+}
+
+.form__account {
+    padding-top: 32px;
+}
+
+.form__account-box-email {
+    width: 300px;
+    height: 64px;
+}
+
+.form__input-radio-text {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.form__input-radio-sqr {
+    margin: 8px 0 0 0;
+}
+
+.form__account-box-phone {
+    width: 173px;
+    height: 64px;
+}
+
+.form__account-box {
+    display: flex;
+    column-gap: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
 
 
 
+
+*/
 
 /* FOOTER */
 
