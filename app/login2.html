@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти 2</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <button class="burger">
+                            <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                            </svg>
+                        </button>
+
+                        <div class="header__location">
+                            <span class="location-item app-location">Ваш город</span>
+                            <div class="modal-location">
+                                <a class="location-item" href="#">Алматы</a>
+                                <a class="location-item" href="#">Астана</a>
+                                <a class="location-item" href="#">Костанай</a>
+                                <a class="location-item" href="#">Казахстан</a>
+                                <a class="location-item" href="#">Россия</a>
+                            </div>
+                        </div>
+
+                        <a class="logo" href="#">
+                            <img class="logo-img" src="../images/logo.webp" alt="Logo">
+                        </a>
+
+                        <ul class="user-nav">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup">
+                                        <input class="search__input" type="text" placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section class="login">
+                <div class="container">
+                    <div class="login-page__inner">
+                        <h1 class="login__title">Войти</h1>
+                        <form class="form__login" action="#">
+                            <label class="form__labels" for="phones">
+                                <select class="form__input form__input-arrow" name="phone" id="phones">
+                                    <option value="num">+7(747) 677-75-49</option>
+                                    <option value="num1">+8(747) 677-75-49</option>
+                                    <option value="num2">+9(747) 677-75-49</option>
+                                </select>
+                            </label>
+                            <div class="form__input-box">
+                                <span class="form__change-phone">+7 (747) 677 - 75 - 49</span>
+                                <a class="form__change-number" href="#">
+                                    <span>+</span>
+                                    <span>Войти под другим номером</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__logo-img" src="./images/footer-logo.webp" alt="Logo">
+                    </a>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            МЕНЮ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Часто задаваемые вопросы
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            ИНФОРМАЦИЯ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Акции и скидки
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Скачать прайс-лист
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            КОНТАКТЫ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-phone" href="tel:+77476777549">
+                                +7 (747) 677-75-49
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-watsapp" href="#" target="_blank">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-inst" href="#" target="_blank">
+                                Инстаграм
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                    <p class="footer__text">© 2023 Perfume Optom Kazakhstan</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
