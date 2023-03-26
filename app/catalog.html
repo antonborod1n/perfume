@@ -463,17 +463,13 @@
                             <div class="catalog__product-box">
                                 <div class="catalog__product-panel">
                                     <span class="catalog__product-results">100 результатов</span>
-                                    <div class="form__filter-sort">
-                                        <div class="form__filter-sort-title">Сортировать:</div>
-                                        <button
-                                            class="catalog__filter-btn catalog__filter-btn-popular form__filter-sort-popular active">по
-                                            популярности
-                                        </button>
-                                        <button
-                                            class="catalog__filter-btn catalog__filter-btn-price form__filter-sort-price">по
-                                            цене
-                                        </button>
-                                    </div>
+                                    <label class="favorite__form-label favorite__form-label-sort" for="sort">
+                                        Сортировать:
+                                        <select class="favorite__form-input favorite__form-input-arrow" id="sort">
+                                            <option value="popularity">популярности</option>
+                                            <option value="price">цене</option>
+                                        </select>
+                                    </label>
                                 </div>
                                 <div class="catalog__product">
                                     <div class="product__item">

@@ -2025,10 +2025,168 @@ a.form__text-link {
     }
 }
 
+/* CART */
 
+.cart {
+    padding: 80px 0 120px;
 
+    &__title {
+        @extend %montserrat-500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #161616;
+        margin-bottom: 60px;
+    }
 
+    &__numb {
+        color: #8932B4;
+    }
 
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    &__label-all {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 28px;
+    }
+
+    &__product {
+        display: flex;
+        gap: 30px;
+        width: 744px;
+
+        &-title {
+            @extend %montserrat-500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        &-img {
+            width: 210px;
+            height: 189px;
+            object-fit: cover;
+        }
+
+        &-volume {
+            font-size: 18px;
+            line-height: 22px;
+            color: #6C6C6C;
+            margin-bottom: 40px;
+        }
+
+    }
+
+    &__btn-like {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 35px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__price-new {
+        @extend %montserrat-500;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        text-decoration-line: none;
+    }
+
+    &__price-old {
+        @extend %montserrat-500;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration-line: line-through;
+        color: #6C6C6C;
+        opacity: 0.5;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__content {
+        width: 470px;
+
+        &-info-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:nth-child(1) {
+                margin-bottom: 8px;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-total {
+            width: 487px;
+        }
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        &-title,
+        &-total-price {
+            @extend %montserrat-500;
+            font-size: 26px;
+            line-height: 32px;
+            color: $black;
+        }
+
+        &-subtitle {
+            color: #6C6C6C;
+        }
+
+        &-total-money {
+            color: #6C6C6C;
+        }
+
+        &-text {
+            @extend %montserrat-500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &-delivery {
+            color: $black;
+        }
+
+        & .quantity {
+            margin-bottom: 0px;
+        }
+    }
+}
 
 /* FOOTER */
 
