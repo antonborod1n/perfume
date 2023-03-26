@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница</title>
+    <title>Вопрос ответ</title>
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -105,7 +105,113 @@
         </header>
 
         <div class="wrapper">
+            <section class="faq">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Часто задаваемые вопросы
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
 
+                    <div class="faq__inner">
+                        <div class="faq__item">
+                            <h1 class="faq__title">Часто задаваемые вопросы</h1>
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Какая минимальная сумма заказа?</h3>
+                                <p class="faq__text">
+                                    Минимальная сумма заказа – 200.000 тг ( 33.300 руб)
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Где производят Вашу парфюмерию?</h3>
+                                <p class="faq__text">
+                                    Производство парфюмерии Турция. Мы не продаем парфюм производства Китай, Украина,
+                                    Россия.
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Как оплачивать?</h3>
+                                <p class="faq__text">
+                                    Оплатить можно картой Visa/Mastercard на сайте. Если вы из России можете оплатить на
+                                    сайте через qiwi кошелёк, либо перевести через Золотую Корону.
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Сколько стоит доставка до моего города?</h3>
+                                <p class="faq__text">
+                                    О стоимости и сроках доставки Вам необходимо узнавать непосредственно у транспортных
+                                    компаний. Обычно срок доставки составляет от 2 до 10 дней в зависимости от
+                                    удаленности региона.
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Как производится обмен брака?</h3>
+                                <p class="faq__text">
+                                    Вы высылаете нам бракованный товар - оплата доставки до нас происходит за ваш счет,
+                                    мы делаем вам скидку при следующем заказе или высылаем желаемый вам товар отдельно,
+                                    после получения высланного нам брака. Также возможен обмен брака без возврата - вы
+                                    его фотографируете или снимаете видео и присылаете нам. В случае если у нас
+                                    возникнут подозрения о том, что данный брак был получен не от нас, а от других
+                                    поставщиков, мы можем попросить его нам переслать.
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Какой объем у той или иной парфюмерной позиции?</h3>
+                                <p class="faq__text">
+                                    Если объем не прописан в названии духов, значит скорее всего они будут в своем
+                                    максимально выпускаемом объеме (как правило это 75, 90, 100, 125 мл.)
+                                </p>
+                            </div>
+
+                            <div class="faq__question">
+                                <h3 class="faq__subtitle">Почему Вы продаете парфюмерию так дешево?</h3>
+                                <p class="faq__text">
+                                    Нашу парфюмерию в сети продают от 30.000 тг (5000 руб), все зависит от бизнес модели
+                                    предпринимателя, мы держим минимальную наценку делая продукт массовым, доступным и
+                                    прибыльным. Вы легко можете заработать от 100% и выше перепродав его, все зависит от
+                                    Вашей смекалки.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq__form-box">
+                            <h2 class="faq__form-title">Остались вопросы?</h2>
+                            <div class="faq__form-info">
+                                <p class="form__text faq__form-text">Пишите нам на Whatsapp и мы поможем вам!</p>
+                                <a class="form__phone-link" href="tel:+77476777549">+7 (747) 677-75-49</a>
+                                <p class="form__text faq__form-text">или оставьте ваш номер телефона и мы свяжемся с
+                                    вами!
+                                </p>
+                            </div>
+                            <form class="faq__form" action="#">
+                                <div class="faq__form-inputs">
+                                    <input class="faq__form-input" type="text" id="faq-name" placeholder="Ваше имя">
+                                    <input class="faq__form-input" type="tel" id="faq-phone" placeholder="Телефон">
+                                </div>
+                                <button class="form__btn form__btn-submit-login" type="submit">Отправить</button>
+                                <p class="form__text">
+                                    Нажимая на кнопку «Оформить заказ»,
+                                    вы принимаете условия <a href="#">Публичной оферты</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer class="footer">

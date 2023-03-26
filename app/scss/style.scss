@@ -1623,19 +1623,77 @@ a.form__text-link {
 
 .terms {
     padding: 80px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 616px;
+    }
+
+    &__title {
+        @extend %montserrat-500;
+        font-size: 28px;
+        line-height: 82%;
+        color: #222222;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        @extend %montserrat-500;
+        font-size: 20px;
+        line-height: 82%;
+        color: #222222;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 150%;
+        color: #6C6C6C;
+        margin-bottom: 32px;
+    }
+
+    &__list-item {
+        font-size: 18px;
+        line-height: 150%;
+        color: #6C6C6C;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+            width: 5px;
+            height: 5px;
+            background-color: $accent;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
 }
 
-.terms__inner {
+/* FAQ */
+
+.faq {
+    padding: 80px 0 120px;
+}
+
+.faq__inner {
     display: flex;
     justify-content: space-between;
-    gap: 159px;
 }
 
-.terms__item {
-    width: 616px;
+.faq__item {
+    max-width: 745px;
 }
 
-.terms__title {
+.faq__title {
     @extend %montserrat-500;
     font-size: 28px;
     line-height: 82%;
@@ -1643,42 +1701,86 @@ a.form__text-link {
     margin-bottom: 40px;
 }
 
-.terms__subtitle {
+.faq__subtitle {
     @extend %montserrat-500;
     font-size: 20px;
-    line-height: 82%;
+    line-height: 150%;
     color: #222222;
     margin-bottom: 16px;
 }
 
-.terms__text {
+.faq__text {
     font-size: 18px;
     line-height: 150%;
     color: #6C6C6C;
     margin-bottom: 32px;
 }
 
-.terms__list-item {
-    font-size: 18px;
-    line-height: 150%;
-    color: #6C6C6C;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+.faq__form-box {
+    width: 486px;
+}
 
-    &::before {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        content: '';
-        width: 5px;
-        height: 5px;
-        background-color: $accent;
-        border-radius: 50%;
-        transform: translateY(-50%);
+.form__phone-link {
+    @extend %montserrat-500;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    padding-left: 40px;
+    margin-bottom: 16px;
+}
+
+.form__phone-link::before {
+    content: url(../images/icons/footer-phone-min.svg);
+    position: absolute;
+    left: 0;
+}
+
+.faq__form-info {
+    margin-bottom: 16px;
+}
+
+.faq__form-title {
+    @extend %montserrat-500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    margin-bottom: 16px;
+}
+
+.faq__form-text {
+    margin-bottom: 16px;
+}
+
+.faq__form-inputs {
+    margin-bottom: 40px;
+}
+
+.faq__form-input {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    width: 100%;
+    height: 40px;
+    opacity: .5;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #6c6c6c;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
+.faq__form-text {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: left;
+    opacity: .5;
+}
 
 
 /* FOOTER */
