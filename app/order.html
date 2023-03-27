@@ -105,11 +105,123 @@
         </header>
 
         <div class="wrapper">
-            <section class="discounts">
+            <section class="order">
                 <div class="container">
+                    <a class="order__pagination pagination-prev" href="#">В корзину</a>
 
+                    <div class="order__inner">
+                        <form class="order__form" action="#">
+                            <div class="order__item-form">
+                                <h1 class="order__title">Оформление заказа</h1>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Фамилия">
+                                    <input class="order__input" type="text" placeholder="Имя">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Отчество (при наличии)">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Страна">
+                                    <input class="order__input" type="text" placeholder="Город">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Улица">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Дом">
+                                    <input class="order__input" type="text" placeholder="Квартира / Офис">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Номер телефона">
+                                    <input class="order__input" type="text" placeholder="Email">
+                                </div>
+                                <div class="order__items">
+                                    <input class="order__input" type="text" placeholder="Комментарий к заказу:">
+                                </div>
 
+                                <div class="order__items-pay">
+                                    <h2 class="order__items-title">Оплата:</h2>
+                                    <div class="order__items-box">
+                                        <label class="order__items-label" for="card">
+                                            <input class="order__items-cheackbox" type="checkbox" id="card">
+                                            Карта Visa / Mastercard
+                                        </label>
+                                        <label class="order__items-label" for="wallet">
+                                            <input class="order__items-cheackbox" type="checkbox" id="wallet">
+                                            Qiwi Кошелек
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="order__item">
+                                <h2 class="order__cart-title">Корзина<span> 3</span></h2>
+
+                                <div class="order__item-box">
+                                    <div class="order__product">
+                                        <img class="order__product-img" src="./images/goods/goods.webp" alt="Товар">
+                                        <div class="order__product-info">
+                                            <h3 class="order__product-title">Kismet For Men (Lattafa)</h3>
+                                            <span class="order__product-brend">Alhambra</span>
+                                        </div>
+                                        <div class="order__product-price-box">
+                                            <div class="order__product-price-count">1<span>шт.</span></div>
+                                            <div class="order__product-price">4 398<span>₸</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order__product">
+                                        <img class="order__product-img" src="./images/goods/goods.webp" alt="Товар">
+                                        <div class="order__product-info">
+                                            <h3 class="order__product-title">Kismet For Men (Lattafa)</h3>
+                                            <span class="order__product-brend">Alhambra</span>
+                                        </div>
+                                        <div class="order__product-price-box">
+                                            <div class="order__product-price-count">1<span>шт.</span></div>
+                                            <div class="order__product-price">4 398<span>₸</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order__product">
+                                        <img class="order__product-img" src="./images/goods/goods.webp" alt="Товар">
+                                        <div class="order__product-info">
+                                            <h3 class="order__product-title">Kismet For Men (Lattafa)</h3>
+                                            <span class="order__product-brend">Alhambra</span>
+                                        </div>
+                                        <div class="order__product-price-box">
+                                            <div class="order__product-price-count">1<span>шт.</span></div>
+                                            <div class="order__product-price">4 398<span>₸</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order__total">
+                                    <div class="order__total-row">
+                                        <span class="order__total-text order__total-delivery">Доставка</span>
+                                        <span class="order__total-text order__total-delivery">Курьерская служба
+                                            CDEK</span>
+                                    </div>
+                                    <div class="order__total-row">
+                                        <span class="order__total-title">Итого</span>
+                                        <div class="order__total-price">13 194<span>₸</span></div>
+                                    </div>
+                                    <div class="order__total-btns">
+                                        <a class="order__total-prev" href="#">Назад в корзину</a>
+                                        <div class="order__total-btns-box">
+                                            <button class="order__total-btn" type="submit">
+                                                Оформить заказ
+                                            </button>
+                                            <p class="order__total-text">
+                                                Нажимая на кнопку «Оформить заказ»,
+                                                вы принимаете условия
+                                                <a href="#">Публичной оферты</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
                     <div class="swiper product-slider">
                         <div class="slider-box">

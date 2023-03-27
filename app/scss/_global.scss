@@ -228,3 +228,31 @@ body {
         text-align: center;
     }
 }
+
+.pagination-prev {
+    display: inline-block;
+    @extend %montserrat-500;
+    font-size: 18px;
+    line-height: 82%;
+    color: #222222;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 40px;
+
+    &::before {
+        content: url(../images/icons/arrow-prev.svg);
+        display: inline-block;
+        width: 8px;
+        height: 15px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: color .3s;
+    }
+
+    &:hover {
+        transition: color .3s;
+        color: lighten($color: #222222, $amount: 30%);
+    }
+}
