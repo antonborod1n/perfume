@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="./css/accordion.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <button class="burger">
+                            <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                            </svg>
+                        </button>
+
+                        <div class="header__location">
+                            <span class="location-item app-location">Ваш город</span>
+                            <div class="modal-location">
+                                <a class="location-item" href="#">Алматы</a>
+                                <a class="location-item" href="#">Астана</a>
+                                <a class="location-item" href="#">Костанай</a>
+                                <a class="location-item" href="#">Казахстан</a>
+                                <a class="location-item" href="#">Россия</a>
+                            </div>
+                        </div>
+
+                        <a class="logo" href="#">
+                            <img class="logo-img" src="../images/logo.webp" alt="Logo">
+                        </a>
+
+                        <ul class="user-nav">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup">
+                                        <input class="search__input" type="text" placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__inner">
+                        <div class="breadcrumbs">
+                            <ol class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="#">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="#">
+                                        Каталог
+                                    </a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="#">
+                                        Мужская парфюмерия
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h1 class="catalog__title">Мужская парфюмерия</h1>
+                    </div>
+
+                    <div class="catalog-content">
+                        <div class="catalog-content__box">
+                            <form class="filter active" action="#">
+                                <div class="accordion" id="accordion">
+                                    <div class="accordion__item form__filter-row">
+                                        <label class="form__filter-label" for="check-new">
+                                            <input class="form__input-checkbox" id="check-new" type="checkbox"
+                                                name="check">
+                                            <span class="form__input-checkbox-sqr form__filter-checkbox-sqr"></span>
+                                            <span
+                                                class="form__input-checkbox-text form__filter-checkbox-text">Новинки</span>
+                                        </label>
+
+                                        <label class="form__filter-label" for="check-sale">
+                                            <input class="form__input-checkbox" id="check-sale" type="checkbox"
+                                                name="check">
+                                            <span class="form__input-checkbox-sqr form__filter-checkbox-sqr"></span>
+                                            <span
+                                                class="form__input-checkbox-text form__filter-checkbox-text">Акции</span>
+                                        </label>
+                                    </div>
+                                    <div class="accordion__item form__filter-row">
+                                        <div class="form__filter-subtitle">Цена</div>
+                                        <labea class="form__filter-label form__filter-label-price" for="num">
+                                            <input class="form__filter-price form__filter-price-min" id="num"
+                                                type="text" name="num" placeholder="от">
+                                            <input class="form__filter-price form__filter-price-max" id="num"
+                                                type="text" name="num" placeholder="до">
+                                        </labea>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <div class="accordion__header">
+                                            <div class="form__filter-subtitle">Бренд</div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <div class="form__filter-row form__filter-brend">
+                                                <label class="form__filter-label" for="brend-1">
+                                                    <input class="form__input-checkbox" id="brend-1" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд1</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-2">
+                                                    <input class="form__input-checkbox" id="brend-2" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд2</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-3">
+                                                    <input class="form__input-checkbox" id="brend-3" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд3</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-4">
+                                                    <input class="form__input-checkbox" id="brend-4" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд4</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-5">
+                                                    <input class="form__input-checkbox" id="brend-5" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд5</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-6">
+                                                    <input class="form__input-checkbox" id="brend-6" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд6</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-7">
+                                                    <input class="form__input-checkbox" id="brend-7" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд7</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-8">
+                                                    <input class="form__input-checkbox" id="brend-8" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд8</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-9">
+                                                    <input class="form__input-checkbox" id="brend-9" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд9</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-10">
+                                                    <input class="form__input-checkbox" id="brend-10" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд10</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-11">
+                                                    <input class="form__input-checkbox" id="brend-11" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд11</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-12">
+                                                    <input class="form__input-checkbox" id="brend-12" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд12</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-13">
+                                                    <input class="form__input-checkbox" id="brend-13" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд13</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-14">
+                                                    <input class="form__input-checkbox" id="brend-14" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд14</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-15">
+                                                    <input class="form__input-checkbox" id="brend-15" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд15</span>
+                                                </label>
+                                                <label class="form__filter-label" for="brend-16">
+                                                    <input class="form__input-checkbox" id="brend-16" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Бренд16</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item form__filter-row">
+                                        <div class="form__filter-subtitle">Объем</div>
+                                        <label class="form__filter-label" for="bottle">
+                                            <input class="form__input-checkbox" id="bottle" type="checkbox"
+                                                name="bottle" checked>
+                                            <span class="form__input-checkbox-sqr form__filter-checkbox-sqr"></span>
+                                            <span
+                                                class="form__input-checkbox-text form__filter-checkbox-text">Флакон</span>
+                                        </label>
+                                        <label class="form__filter-label" for="otliv">
+                                            <input class="form__input-checkbox" id="otliv" type="checkbox" name="otliv">
+                                            <span class="form__input-checkbox-sqr form__filter-checkbox-sqr"></span>
+                                            <span
+                                                class="form__input-checkbox-text form__filter-checkbox-text">Отливант</span>
+                                        </label>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <div class="accordion__header">
+                                            <div class="form__filter-subtitle">Группа аромата</div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <div class="form__filter-row form__filter-aroma">
+                                                <label class="form__filter-label" for="group-1">
+                                                    <input class="form__input-checkbox" id="group-1" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа1</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-2">
+                                                    <input class="form__input-checkbox" id="group-2" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа2</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-3">
+                                                    <input class="form__input-checkbox" id="group-3" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа3</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-4">
+                                                    <input class="form__input-checkbox" id="group-4" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа4</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-5">
+                                                    <input class="form__input-checkbox" id="group-5" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа5</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-6">
+                                                    <input class="form__input-checkbox" id="group-6" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа6</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-7">
+                                                    <input class="form__input-checkbox" id="group-7" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа7</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-8">
+                                                    <input class="form__input-checkbox" id="group-8" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа8</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-9">
+                                                    <input class="form__input-checkbox" id="group-9" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа9</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-10">
+                                                    <input class="form__input-checkbox" id="group-10" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа10</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-11">
+                                                    <input class="form__input-checkbox" id="group-11" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа11</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-12">
+                                                    <input class="form__input-checkbox" id="group-12" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа12</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-13">
+                                                    <input class="form__input-checkbox" id="group-13" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа13</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-14">
+                                                    <input class="form__input-checkbox" id="group-14" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа14</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-15">
+                                                    <input class="form__input-checkbox" id="group-15" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа15</span>
+                                                </label>
+                                                <label class="form__filter-label" for="group-16">
+                                                    <input class="form__input-checkbox" id="group-16" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа16</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <div class="accordion__header">
+                                            <div class="form__filter-subtitle">Страна бренда</div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <div class="form__filter-row form__filter-country">
+                                                <label class="form__filter-label" for="country-1">
+                                                    <input class="form__input-checkbox" id="country-1" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа1</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-2">
+                                                    <input class="form__input-checkbox" id="country-2" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа2</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-3">
+                                                    <input class="form__input-checkbox" id="country-3" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа3</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-4">
+                                                    <input class="form__input-checkbox" id="country-4" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа4</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-5">
+                                                    <input class="form__input-checkbox" id="country-5" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа5</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-6">
+                                                    <input class="form__input-checkbox" id="country-6" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа6</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-7">
+                                                    <input class="form__input-checkbox" id="country-7" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа7</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-8">
+                                                    <input class="form__input-checkbox" id="country-8" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа8</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-9">
+                                                    <input class="form__input-checkbox" id="country-9" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа9</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-10">
+                                                    <input class="form__input-checkbox" id="country-10" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа10</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-11">
+                                                    <input class="form__input-checkbox" id="country-11" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа11</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-12">
+                                                    <input class="form__input-checkbox" id="country-12" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа12</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-13">
+                                                    <input class="form__input-checkbox" id="country-13" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа13</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-14">
+                                                    <input class="form__input-checkbox" id="country-14" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа14</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-15">
+                                                    <input class="form__input-checkbox" id="country-15" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа15</span>
+                                                </label>
+                                                <label class="form__filter-label" for="country-16">
+                                                    <input class="form__input-checkbox" id="country-16" type="checkbox"
+                                                        name="check">
+                                                    <span class="form__filter-text">Группа16</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="form__brn-reset" type="reset">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path d="M1 0.5L14 13.5" stroke="#151515" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14 0.5L1 13.5" stroke="#151515" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                    <span>Сбросить все</span>
+                                </button>
+                                <button class="form__brn-submit" type="submit">Применить</button>
+                            </form>
+
+                            <div class="catalog__product-box">
+                                <div class="catalog__product-panel">
+                                    <span class="catalog__product-results">100 результатов</span>
+                                    <label class="favorite__form-label favorite__form-label-sort" for="sort">
+                                        Сортировать:
+                                        <select class="favorite__form-input favorite__form-input-arrow" id="sort">
+                                            <option value="popularity">популярности</option>
+                                            <option value="price">цене</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <a class="pagination__arrows pagination__arrows-next no-active" href="#">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.7">
+                                        <line y1="-0.5" x2="8.48529" y2="-0.5"
+                                            transform="matrix(-0.707106 -0.707108 -0.707106 0.707107 6 12)"
+                                            stroke="#151515" />
+                                        <line y1="-0.5" x2="8.48529" y2="-0.5"
+                                            transform="matrix(-0.707106 0.707107 -0.707106 -0.707108 6 0)"
+                                            stroke="#151515" />
+                                    </g>
+                                </svg>
+                                <span>Назад</span>
+                            </a>
+                            <ul class="pagination__list">
+                                <li class="pagination__item">
+                                    <a class="pagination__link active" href="#">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        4
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="pagination__arrows pagination__arrows-prew" href="#">
+                                <span>Вперед</span>
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <line y1="-0.5" x2="8.48529" y2="-0.5"
+                                        transform="matrix(0.707106 0.707107 0.707106 -0.707107 1 0)" stroke="#151515" />
+                                    <line y1="-0.5" x2="8.48529" y2="-0.5"
+                                        transform="matrix(0.707106 -0.707107 0.707106 0.707107 1 12)"
+                                        stroke="#151515" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="swiper product-slider">
+                            <div class="slider-box">
+                                <h2 class="product__title-top">Вам может понравиться</h2>
+                                <div class="slider-btn-box">
+                                    <div class="swiper-button-prev">
+                                        <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="-1" x2="19.5256" y2="-1"
+                                                transform="matrix(-0.768221 -0.640184 -0.768221 0.640185 15 25)"
+                                                stroke="#151515" stroke-width="2" />
+                                            <line y1="-1" x2="19.5256" y2="-1"
+                                                transform="matrix(-0.768221 0.640185 -0.768221 -0.640184 15 0)"
+                                                stroke="#151515" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="-1" x2="19.5256" y2="-1"
+                                                transform="matrix(0.768221 0.640185 0.768221 -0.640184 2 0)"
+                                                stroke="#151515" stroke-width="2" />
+                                            <line y1="-1" x2="19.5256" y2="-1"
+                                                transform="matrix(0.768221 -0.640184 0.768221 0.640185 2 25)"
+                                                stroke="#151515" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="product__item">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="product__item-row">
+                                                <span class="product__new">New</span>
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="product__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="product__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+                                            <button class="product__btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__logo-img" src="./images/footer-logo.webp" alt="Logo">
+                    </a>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            МЕНЮ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Часто задаваемые вопросы
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            ИНФОРМАЦИЯ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Акции и скидки
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Скачать прайс-лист
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            КОНТАКТЫ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-phone" href="tel:+77476777549">
+                                +7 (747) 677-75-49
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-watsapp" href="#" target="_blank">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-inst" href="#" target="_blank">
+                                Инстаграм
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                    <p class="footer__text">© 2023 Perfume Optom Kazakhstan</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/accordion.js"></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

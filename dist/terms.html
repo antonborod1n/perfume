@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата и доставка</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <button class="burger">
+                            <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                            </svg>
+                        </button>
+
+                        <div class="header__location">
+                            <span class="location-item app-location">Ваш город</span>
+                            <div class="modal-location">
+                                <a class="location-item" href="#">Алматы</a>
+                                <a class="location-item" href="#">Астана</a>
+                                <a class="location-item" href="#">Костанай</a>
+                                <a class="location-item" href="#">Казахстан</a>
+                                <a class="location-item" href="#">Россия</a>
+                            </div>
+                        </div>
+
+                        <a class="logo" href="#">
+                            <img class="logo-img" src="../images/logo.webp" alt="Logo">
+                        </a>
+
+                        <ul class="user-nav">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup">
+                                        <input class="search__input" type="text" placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section class="terms">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    Доставка и оплата
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="terms__inner">
+                        <div class="terms__item">
+                            <h2 class="terms__title">Доставка</h2>
+                            <h3 class="terms__subtitle">По городу Алматы</h3>
+                            <p class="terms__text">
+                                Доставка по городу Алматы производится через Яндекс Курьер. Обработка заявки до 3
+                                рабочих дней.
+                            </p>
+
+                            <h3 class="terms__subtitle">По странам СНГ</h3>
+                            <p class="terms__text">
+                                Доставка по странам СНГ производится через курьерскую службу CDEK. Заказ передадут в
+                                курьерскую службу до 3 рабочий дней.
+                            </p>
+
+                            <h3 class="terms__subtitle">Отгрузка со склада Алматы</h3>
+                            <p class="terms__text">
+                                Отгрузка и доставка товара производится со склада в городе Алматы.
+                            </p>
+                        </div>
+                        <div class="terms__item">
+                            <h2 class="terms__title">Оплата</h2>
+                            <h3 class="terms__subtitle">Минимальная сумма заказа</h3>
+                            <p class="terms__text">
+                                Минимальная сумма заказа от 200.000 ₸
+                            </p>
+                            <h3 class="terms__subtitle">Способы оплаты</h3>
+                            <ul class="terms__list">
+                                <li class="terms__list-item">Карты Visa / Mastercard</li>
+                                <li class="terms__list-item">Qiwi Кошелек</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                    <div class="advantages__inner">
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                FREE
+                            </div>
+                            <p class="advantages__text">
+                                Бесплатная доставка от 200.000 ₸
+                            </p>
+                        </div>
+
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                FREE
+                            </div>
+                            <p class="advantages__text">
+                                Гарантия качества
+                            </p>
+                        </div>
+
+                        <div class="advantages__item">
+                            <div class="advantages__icon">
+                                KZ
+                            </div>
+                            <p class="advantages__text">
+                                Доставка по всему Казахстану и СНГ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__logo-img" src="./images/footer-logo.webp" alt="Logo">
+                    </a>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            МЕНЮ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Часто задаваемые вопросы
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            ИНФОРМАЦИЯ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Акции и скидки
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Скачать прайс-лист
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__list">
+                        <li class="footer__item-title">
+                            КОНТАКТЫ
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-phone" href="tel:+77476777549">
+                                +7 (747) 677-75-49
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-watsapp" href="#" target="_blank">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link-social footer__link-inst" href="#" target="_blank">
+                                Инстаграм
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                    <p class="footer__text">© 2023 Perfume Optom Kazakhstan</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
