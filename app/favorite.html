@@ -104,12 +104,14 @@
             </div>
         </header>
 
+        <div class="overlay-filter"></div>
+
         <div class="wrapper">
             <section class="favorite">
                 <div class="container">
                     <div class="breadcrumbs">
                         <ol class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
+                            <li class="breadcrumbs__item breadcrumbs__main">
                                 <a class="breadcrumbs__link" href="#">
                                     Главная
                                 </a>
@@ -133,10 +135,16 @@
                                             placeholder="Введите название бренда...">
                                     </div>
 
-                                    <label class="favorite__form-label favorite__form-label-stock" for="stock">
-                                        <input type="checkbox" id="stock">
-                                        Снова в наличии
+                                    <label class="favorite__label decor__label" for="all-product">
+                                        <input class="decor__items-cheackbox decor__input-checkbox" name="all"
+                                            id="all-product" type="checkbox">
+                                        <span class="decor__input-checkbox-sqr"></span>
+                                        <span class="decor__input-checkbox-text">Выбрать все</span>
                                     </label>
+                                </div>
+
+                                <div class="catalog__product-panel-box">
+                                    <button class="catalog__product-panel-btn catalog__product-panel-sort"></button>
                                 </div>
 
                                 <label class="favorite__form-label favorite__form-label-sort" for="sort">
@@ -146,6 +154,30 @@
                                         <option value="price">цене</option>
                                     </select>
                                 </label>
+                            </form>
+
+                            <form class="sort" action="#">
+                                <div class="filter__top-box">
+                                    <div class="filter__top-name">Сортировка</div>
+                                    <button class="sort-close"></button>
+                                </div>
+                                <div class="sort-box">
+                                    <label class="sort__label" for="min">
+                                        <span class="sort__text">Цена по убыванию</span>
+                                        <div class="sort__radio-box">
+                                            <input class="sort__radio" id="min" name="sort" type="radio">
+                                            <span class="sort__sqr"></span>
+                                        </div>
+                                    </label>
+
+                                    <label class="sort__label" for="max">
+                                        <span class="sort__text">Цена по возрастанию</span>
+                                        <div class="sort__radio-box">
+                                            <input class="sort__radio" id="max" name="sort" type="radio">
+                                            <span class="sort__sqr"></span>
+                                        </div>
+                                    </label>
+                                </div>
                             </form>
                         </div>
 
@@ -717,6 +749,7 @@
         </footer>
     </main>
 
+    <script src="./js/catalog.js"></script>
     <script src="./js/main.min.js"></script>
 </body>
 

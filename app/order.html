@@ -121,8 +121,16 @@
                                     <input class="order__input" type="text" placeholder="Отчество (при наличии)">
                                 </div>
                                 <div class="order__items">
-                                    <input class="order__input" type="text" placeholder="Страна">
-                                    <input class="order__input" type="text" placeholder="Город">
+                                    <select class="order__input order__input-arrow" name="country" id="countrys">
+                                        <option value="num">Страна</option>
+                                        <option value="num1">2</option>
+                                        <option value="num2">3</option>
+                                    </select>
+                                    <select class="order__input order__input-arrow" name="city" id="cities">
+                                        <option value="num">Город</option>
+                                        <option value="num1">2</option>
+                                        <option value="num2">3</option>
+                                    </select>
                                 </div>
                                 <div class="order__items">
                                     <input class="order__input" type="text" placeholder="Улица">
@@ -143,12 +151,17 @@
                                     <h2 class="order__items-title">Оплата:</h2>
                                     <div class="order__items-box">
                                         <label class="order__items-label" for="card">
-                                            <input class="order__items-cheackbox" type="checkbox" id="card">
-                                            Карта Visa / Mastercard
+                                            <input class="order__items-cheackbox order__input-checkbox" name="pay"
+                                                id="card" type="radio" checked="">
+                                            <span class="order__input-checkbox-sqr"></span>
+                                            <span class="order__input-checkbox-text">Карта Visa / Mastercard</span>
                                         </label>
-                                        <label class="order__items-label" for="wallet">
-                                            <input class="order__items-cheackbox" type="checkbox" id="wallet">
-                                            Qiwi Кошелек
+
+                                        <label class="order__items-label" for="wall">
+                                            <input class="order__items-cheackbox order__input-checkbox" name="pay"
+                                                id="wall" type="radio">
+                                            <span class="order__input-checkbox-sqr"></span>
+                                            <span class="order__input-checkbox-text">Qiwi Кошелек</span>
                                         </label>
                                     </div>
                                 </div>
@@ -197,8 +210,8 @@
 
                                 <div class="order__total">
                                     <div class="order__total-row">
-                                        <span class="order__total-text order__total-delivery">Доставка</span>
-                                        <span class="order__total-text order__total-delivery">Курьерская служба
+                                        <span class="order__total-delivery">Доставка</span>
+                                        <span class="order__total-delivery">Курьерская служба
                                             CDEK</span>
                                     </div>
                                     <div class="order__total-row">

@@ -105,20 +105,17 @@
             </div>
         </header>
 
+        <div class="overlay-filter"></div>
+
         <div class="wrapper">
-            <section class="catalog">
+            <section class="catalog discounts">
                 <div class="container">
                     <div class="catalog__inner">
                         <div class="breadcrumbs">
                             <ol class="breadcrumbs__list">
-                                <li class="breadcrumbs__item">
+                                <li class="breadcrumbs__item breadcrumbs__main">
                                     <a class="breadcrumbs__link" href="#">
                                         Главная
-                                    </a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="#">
-                                        Каталог
                                     </a>
                                 </li>
                                 <li class="breadcrumbs__item">
@@ -133,27 +130,42 @@
 
                     <div class="catalog-content">
                         <div class="catalog-content__box">
-                            <form class="filter active" action="#">
-                                <div class="accordion" id="accordion">
-                                    <div class="accordion__item form__filter-row">
-                                        <div class="form__filter-subtitle">Цена</div>
-                                        <labea class="form__filter-label form__filter-label-price" for="num">
-                                            <input class="form__filter-price form__filter-price-min" id="num"
-                                                type="text" name="num" placeholder="от">
-                                            <input class="form__filter-price form__filter-price-max" id="num"
-                                                type="text" name="num" placeholder="до">
-                                        </labea>
-                                    </div>
-                                    <div class="accordion__item form__filter-row">
-                                        <div class="form__filter-subtitle">Процент скидки</div>
-                                        <labea class="form__filter-label form__filter-label-price" for="num">
-                                            <input class="form__filter-price form__filter-price-min" id="num"
-                                                type="text" name="num" placeholder="от">
-                                            <input class="form__filter-price form__filter-price-max" id="num"
-                                                type="text" name="num" placeholder="до">
-                                        </labea>
-                                    </div>
+                            <form class="filter" action="#">
+                                <div class="filter__top-box">
+                                    <div class="filter__top-name">Фильтры</div>
+                                    <button class="filter-close"></button>
                                 </div>
+                                <div class="accordion" id="accordion">
+                                    <div class="accordion__item accordion__item_show">
+                                        <div class="accordion__header filter__price">
+                                            <div class="form__filter-subtitle">Цена</div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <labea class="form__filter-label form__filter-label-price" for="num">
+                                                <input class="form__filter-price form__filter-price-min" id="num"
+                                                    type="text" name="num" placeholder="От Т">
+                                                <input class="form__filter-price form__filter-price-max" id="num"
+                                                    type="text" name="num" placeholder="До Т">
+                                            </labea>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion__item accordion__item_show">
+                                        <div class="accordion__header filter__price">
+                                            <div class="form__filter-subtitle"></div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <labea class="form__filter-label form__filter-label-price" for="num">
+                                                <input class="form__filter-price form__filter-price-min" id="num"
+                                                    type="text" name="num" placeholder="От %">
+                                                <input class="form__filter-price form__filter-price-max" id="num"
+                                                    type="text" name="num" placeholder="До %">
+                                            </labea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                                 <button class="form__brn-reset" type="reset">
                                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -166,13 +178,42 @@
                                     </svg>
                                     <span>Сбросить все</span>
                                 </button>
+
                                 <button class="form__brn-submit" type="submit">Применить</button>
+                            </form>
+
+                            <form class="sort" action="#">
+                                <div class="filter__top-box">
+                                    <div class="filter__top-name">Сортировка</div>
+                                    <button class="sort-close"></button>
+                                </div>
+                                <div class="sort-box">
+                                    <label class="sort__label" for="min">
+                                        <span class="sort__text">Цена по убыванию</span>
+                                        <div class="sort__radio-box">
+                                            <input class="sort__radio" id="min" name="sort" type="radio">
+                                            <span class="sort__sqr"></span>
+                                        </div>
+                                    </label>
+
+                                    <label class="sort__label" for="max">
+                                        <span class="sort__text">Цена по возрастанию</span>
+                                        <div class="sort__radio-box">
+                                            <input class="sort__radio" id="max" name="sort" type="radio">
+                                            <span class="sort__sqr"></span>
+                                        </div>
+                                    </label>
+                                </div>
                             </form>
 
                             <div class="catalog__product-box">
                                 <div class="catalog__product-panel">
                                     <span class="catalog__product-results">100 результатов</span>
-
+                                    <div class="catalog__product-panel-box">
+                                        <button class="catalog__product-panel-btn catalog__product-panel-sort"></button>
+                                        <button
+                                            class="catalog__product-panel-btn catalog__product-panel-filter"></button>
+                                    </div>
                                     <label class="favorite__form-label favorite__form-label-sort" for="sort">
                                         Сортировать:
                                         <select class="favorite__form-input favorite__form-input-arrow" id="sort">
@@ -182,7 +223,62 @@
                                     </label>
                                 </div>
                                 <div class="catalog__product">
-                                    <div class="product__item">
+                                    <div class="product__items">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+
+                                            <div class="product-quantity">
+                                                <button class="product-quantity__btn">
+                                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.5" y1="1" x2="15.5" y2="1" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                    </svg>
+                                                </button>
+                                                <div class="product-quantity__input">
+                                                    1
+                                                </div>
+                                                <button class="product-quantity__btn">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.5" y1="7.5" x2="15.5" y2="7.5" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                        <line x1="7.5" y1="15.5" x2="7.5" y2="0.5" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -216,7 +312,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -250,7 +346,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -284,41 +380,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
-                                        <div class="product__item-box">
-                                            <a class="product__img-link" href="#">
-                                                <img class="product__item-img" src="./images/goods/1.webp"
-                                                    alt="Product">
-                                            </a>
-                                            <div class="catalog__item-row">
-                                                <a class="favor-link product__favor-link" href="#">
-                                                    <svg width="26" height="24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
-                                                            stroke="#000" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="product__info">
-                                            <div class="product__title-box">
-                                                <h3 class="product__title">
-                                                    <a class="catalog__title-link" href="#">
-                                                        Kismet For Men (Lattafa)
-                                                    </a>
-                                                </h3>
-                                                <div class="product__category">Мужская парфюмерия</div>
-                                            </div>
-                                            <div class="product__price-box">
-                                                <div class="catalog__price">4 398<span>₸</span></div>
-                                                <div class="product__stock">В наличии</div>
-                                            </div>
-                                            <button class="product__btn">В корзину</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -354,6 +416,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <a class="more__link" href="#">Показать еще</a>
 
                         <div class="pagination">
                             <a class="pagination__arrows pagination__arrows-next no-active" href="#">
@@ -820,6 +884,7 @@
     </main>
 
     <script src="./js/accordion.js"></script>
+    <script src="./js/catalog.js"></script>
     <script src="./js/main.min.js"></script>
 </body>
 

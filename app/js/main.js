@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const mainSlider = new Swiper('.top-slider', {
         slidesPerView: 1,
         navigation: {
-            nextEl: '.swiper-button-next-1',
-            prevEl: '.swiper-button-prev-1',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         pagination: {
             el: '.swiper-pagination',
@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 1,
                 spaceBetween: 30
             },
-            370: {
+            460: {
                 slidesPerView: 2,
                 spaceBetween: 30
             },
 
-            760: {
+            780: {
                 slidesPerView: 3,
                 spaceBetween: 30
             },
 
-            940: {
+            1280: {
                 slidesPerView: 4,
                 spaceBetween: 30
             }
@@ -90,6 +90,40 @@ document.addEventListener('DOMContentLoaded', function () {
             swiper: mySwiperNav,
         }
     })
+
+    //mob menu
+
+    const menuBtn = document.querySelector('.burger');
+    const closeBtn = document.querySelector('.close');
+    const menu = document.querySelector('.menu');
+    const userNav = document.querySelector('.user-nav');
+
+    menuBtn.addEventListener('click', function () {
+        document.body.style.overflow = 'hidden';
+        menu.classList.add('visible');
+        userNav.classList.add('hidden');
+        menuBtn.classList.add('hidden');
+        closeBtn.classList.add('visible');
+    });
+
+    closeBtn.addEventListener('click', function () {
+        document.body.style.overflow = '';
+        menu.classList.remove('visible');
+        userNav.classList.remove('hidden');
+        menuBtn.classList.remove('hidden');
+        closeBtn.classList.remove('visible');
+    });
+
+    /* catalog menu */
+
+    const catalogBtnOpen = document.querySelector('.menu__link-catalog');
+    const menuCatalog = document.querySelector('.menu-catalog');
+
+    catalogBtnOpen.addEventListener('click', function () {
+        menuCatalog.classList.toggle('visible');
+    });
+
+
 
     //tabs
     const tabsBtn = document.querySelectorAll('.goods__tabs-control-btn');
