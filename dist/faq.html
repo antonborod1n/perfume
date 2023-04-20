@@ -16,7 +16,7 @@
                     <div class="header__top">
                         <button class="burger">
                             <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                                <path stroke="#151515" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
                             </svg>
                         </button>
 
@@ -36,12 +36,131 @@
                         </a>
 
                         <ul class="user-nav">
-                            <li class="user-nav__item">
+                            <li class="user-nav__item user-nav__item-icon">
                                 <div class="search">
                                     <div class="search-popup">
                                         <input class="search__input" type="text" placeholder="Поиск по товарам">
                                     </div>
                                     <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item user-nav__item-icon">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item user-nav__item-icon">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item user-nav__basket">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <button class="close">
+                            <svg width="35" height="34" viewBox="0 0 35 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.50586 8.51147L26.492 25.4698" stroke="#151515" stroke-width="1.28571"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M26.492 8.51147L8.50586 25.4698" stroke="#151515" stroke-width="1.28571"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+
+                            <li class="menu__item menu__catalog-m">
+                                <a class="menu__link" href="#">
+                                    каталог
+                                </a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="menu-catalog">
+                            <ul class="menu-catalog__list">
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Парфюмированная вода в ассортименте, 100 мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Туалетная/ парфюмированная вода в ассортименте, 50мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Туалетная/ парфюмированная вода в ассортименте, 35мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Дезодоранты парфюмированные, в ассортименте, 200мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Шимеры парфюмированные в ассортименте, 250мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Дезодоранты парфюмированные роликовые, 50мл
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="user-nav user-nav-m">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup search-popup-m">
+                                        <input class="search__input search__input-m" type="text"
+                                            placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link search-link-m" href="#">
                                         <svg width="30" height="30">
                                             <use xlink:href="../images/icons/sprite.svg#search"></use>
                                         </svg>
@@ -62,42 +181,6 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="user-nav__item">
-                                <a class="user-nav__link basket-link" href="#">
-                                    <svg width="30" height="30">
-                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
-                                    </svg>
-                                    <span class="user-nav__basket-num">1</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="menu-overlay">
-                    </div>
-
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a class="menu__link menu__link-catalog" href="#">
-                                    каталог
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    акции
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    новинки
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    магазины
-                                </a>
-                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -109,7 +192,7 @@
                 <div class="container">
                     <div class="breadcrumbs">
                         <ol class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
+                            <li class="breadcrumbs__item breadcrumbs__main">
                                 <a class="breadcrumbs__link" href="#">
                                     Главная
                                 </a>
@@ -191,9 +274,9 @@
                         <div class="faq__form-box">
                             <h2 class="faq__form-title">Остались вопросы?</h2>
                             <div class="faq__form-info">
-                                <p class="form__text faq__form-text">Пишите нам на Whatsapp и мы поможем вам!</p>
+                                <p class="faq__form-text">Пишите нам на Whatsapp и мы поможем вам!</p>
                                 <a class="faq__form-phone-link" href="tel:+77476777549">+7 (747) 677-75-49</a>
-                                <p class="form__text faq__form-text">или оставьте ваш номер телефона и мы свяжемся с
+                                <p class="faq__form-text">или оставьте ваш номер телефона и мы свяжемся с
                                     вами!
                                 </p>
                             </div>

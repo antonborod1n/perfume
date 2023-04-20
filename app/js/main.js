@@ -114,52 +114,64 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBtn.classList.remove('visible');
     });
 
-    /* catalog menu */
+    /* catalog menu header*/
 
     const catalogBtnOpen = document.querySelector('.menu__link-catalog');
+
     const menuCatalog = document.querySelector('.menu-catalog');
 
-    catalogBtnOpen.addEventListener('click', function () {
+    catalogBtnOpen.addEventListener('click', function (e) {
+        e.preventDefault();
+
         menuCatalog.classList.toggle('visible');
     });
 
+    /* location */
 
+    const locationPopup = document.querySelector('.modal-location');
+    const locationBtn = document.querySelector('.app-location');
 
-    //tabs
-    const tabsBtn = document.querySelectorAll('.goods__tabs-control-btn');
-    const tabsContent = document.querySelectorAll('.goods__tabs-content-block');
-    const tabsControl = document.querySelector('.goods__tabs-control');
-    const active = 'goods__tabs-control-btn--active';
-
-    function hideTabContent() {
-        tabsContent.forEach(item => {
-            item.style.display = 'none';
-        });
-
-        tabsBtn.forEach(item => {
-            item.classList.remove(active);
-        });
-    }
-
-    function showTabsContent(i = 0) {
-        tabsContent[i].style.display = 'block';
-        tabsBtn[i].classList.add(active);
-    }
-
-    hideTabContent();
-    showTabsContent();
-
-    tabsControl.addEventListener('click', (event) => {
-        const target = event.target;
-
-        if (target && target.classList.contains('goods__tabs-control-btn')) {
-            tabsBtn.forEach((item, i) => {
-                if (target == item) {
-                    hideTabContent();
-                    showTabsContent(i);
-                }
-            });
-        }
+    locationBtn.addEventListener('click', function () {
+        locationPopup.classList.toggle('active');
     });
+
+    /* search */
+    const searchBtn = document.querySelector('.search-link');
+    const searchPopup = document.querySelector('.search-popup');
+
+    searchBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        searchPopup.classList.toggle('active');
+    });
+
+    const searchBtnM = document.querySelector('.search-link-m');
+    const searchPopupM = document.querySelector('.search-popup-m');
+
+    searchBtnM.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        searchPopupM.classList.toggle('active');
+    });
+
+    /* catalog filter */
+
+    const sortPopup = document.querySelector('.sort');
+    const sortClose = document.querySelector('.sort-close');
+    const catalogSort = document.querySelector('.catalog__product-panel-sort');
+    const overlayFilter = document.querySelector('.overlay-filter');
+
+    overlayFilter.addEventListener('click', close);
+    sortClose.addEventListener('click', close);
+
+    catalogSort.addEventListener('click', function () {
+        sortPopup.classList.add('active');
+        overlayFilter.classList.add('active');
+    });
+
+    function close() {
+        sortPopup.classList.remove('active');
+        overlayFilter.classList.remove('active');
+    }
 });
 

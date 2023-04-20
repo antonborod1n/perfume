@@ -17,7 +17,7 @@
                     <div class="header__top">
                         <button class="burger">
                             <svg width="30" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="#FAFAFA" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
+                                <path stroke="#151515" stroke-width="2" d="M0 1h30M0 8h30M0 15h30" />
                             </svg>
                         </button>
 
@@ -37,12 +37,131 @@
                         </a>
 
                         <ul class="user-nav">
-                            <li class="user-nav__item">
+                            <li class="user-nav__item user-nav__item-icon">
                                 <div class="search">
                                     <div class="search-popup">
                                         <input class="search__input" type="text" placeholder="Поиск по товарам">
                                     </div>
                                     <a class="search-link" href="#">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="../images/icons/sprite.svg#search"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-nav__item user-nav__item-icon">
+                                <a class="user-nav__link heart-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item user-nav__item-icon">
+                                <a class="user-nav__link user-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="user-nav__item user-nav__basket">
+                                <a class="user-nav__link basket-link" href="#">
+                                    <svg width="30" height="30">
+                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
+                                    </svg>
+                                    <span class="user-nav__basket-num">1</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <button class="close">
+                            <svg width="35" height="34" viewBox="0 0 35 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.50586 8.51147L26.492 25.4698" stroke="#151515" stroke-width="1.28571"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M26.492 8.51147L8.50586 25.4698" stroke="#151515" stroke-width="1.28571"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="menu-overlay">
+                    </div>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link-catalog" href="#">
+                                    каталог
+                                </a>
+                            </li>
+
+                            <li class="menu__item menu__catalog-m">
+                                <a class="menu__link" href="#">
+                                    каталог
+                                </a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    акции
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    новинки
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    магазины
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="menu-catalog">
+                            <ul class="menu-catalog__list">
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Парфюмированная вода в ассортименте, 100 мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Туалетная/ парфюмированная вода в ассортименте, 50мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Туалетная/ парфюмированная вода в ассортименте, 35мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Дезодоранты парфюмированные, в ассортименте, 200мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Шимеры парфюмированные в ассортименте, 250мл
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__item">
+                                    <a class="menu-catalog__link">
+                                        Дезодоранты парфюмированные роликовые, 50мл
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="user-nav user-nav-m">
+                            <li class="user-nav__item">
+                                <div class="search">
+                                    <div class="search-popup search-popup-m">
+                                        <input class="search__input search__input-m" type="text"
+                                            placeholder="Поиск по товарам">
+                                    </div>
+                                    <a class="search-link search-link-m" href="#">
                                         <svg width="30" height="30">
                                             <use xlink:href="../images/icons/sprite.svg#search"></use>
                                         </svg>
@@ -63,47 +182,13 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="user-nav__item">
-                                <a class="user-nav__link basket-link" href="#">
-                                    <svg width="30" height="30">
-                                        <use xlink:href="../images/icons/sprite.svg#basket"></use>
-                                    </svg>
-                                    <span class="user-nav__basket-num">1</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="menu-overlay">
-                    </div>
-
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a class="menu__link menu__link-catalog" href="#">
-                                    каталог
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    акции
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    новинки
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">
-                                    магазины
-                                </a>
-                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+
+        <div class="overlay-filter"></div>
 
         <div class="wrapper">
             <section class="catalog">
@@ -111,7 +196,7 @@
                     <div class="catalog__inner">
                         <div class="breadcrumbs">
                             <ol class="breadcrumbs__list">
-                                <li class="breadcrumbs__item">
+                                <li class="breadcrumbs__item breadcrumbs__main">
                                     <a class="breadcrumbs__link" href="#">
                                         Главная
                                     </a>
@@ -133,84 +218,109 @@
 
                     <div class="catalog-content">
                         <div class="catalog-content__box">
-                            <form class="filter active" action="#">
-                                <div class="accordion" id="accordion">
-
-                                    <div class="accordion__item form__filter-row">
-                                        <div class="form__filter-subtitle">Цена</div>
-                                        <labea class="form__filter-label form__filter-label-price" for="num">
-                                            <input class="form__filter-price form__filter-price-min" id="num"
-                                                type="text" name="num" placeholder="от">
-                                            <input class="form__filter-price form__filter-price-max" id="num"
-                                                type="text" name="num" placeholder="до">
-                                        </labea>
-                                    </div>
-
+                            <form class="filter" action="#">
+                                <div class="filter__top-box">
+                                    <div class="filter__top-name">Фильтры</div>
+                                    <button class="filter-close"></button>
+                                </div>
+                                <div class="accordion" id="accordion-filter">
                                     <div class="accordion__item">
-                                        <div class="accordion__header">
-                                            <div class="form__filter-subtitle">Пол</div>
+                                        <div class="accordion__header filter__price">
+                                            <div class="form__filter-subtitle">Цена</div>
                                         </div>
                                         <div class="accordion__body">
-                                            <div class="form__filter-row form__filter-brend">
-                                                <label class="form__filter-label" for="brend-1">
-                                                    <input class="form__input-checkbox" id="brend-1" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Пол1</span>
+                                            <labea class="form__filter-label form__filter-label-price" for="num">
+                                                <input class="form__filter-price form__filter-price-min" id="num"
+                                                    type="text" name="num" placeholder="От">
+                                                <input class="form__filter-price form__filter-price-max" id="num"
+                                                    type="text" name="num" placeholder="До">
+                                            </labea>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion__item accordion__item_show">
+                                        <div class="accordion__header">
+                                            <div class="form__filter-subtitle">Пол <span>1</span></div>
+                                        </div>
+                                        <div class="accordion__body">
+                                            <div class="form__filter-col">
+                                                <label class="decor__label" for="female-checkbox">
+                                                    <input class="decor__items-cheackbox decor__input-checkbox"
+                                                        name="female" id="female-checkbox" type="checkbox" checked>
+                                                    <span class="decor__input-checkbox-sqr"></span>
+                                                    <span class="decor__input-checkbox-text">Женский</span>
                                                 </label>
-                                                <label class="form__filter-label" for="brend-2">
-                                                    <input class="form__input-checkbox" id="brend-2" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Пол2</span>
+
+                                                <label class="decor__label" for="male-checkbox">
+                                                    <input class="decor__items-cheackbox decor__input-checkbox"
+                                                        name="male" id="male-checkbox" type="checkbox">
+                                                    <span class="decor__input-checkbox-sqr"></span>
+                                                    <span class="decor__input-checkbox-text">Мужской</span>
                                                 </label>
-                                                <label class="form__filter-label" for="brend-3">
-                                                    <input class="form__input-checkbox" id="brend-3" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Пол3</span>
-                                                </label>
-                                                <label class="form__filter-label" for="brend-4">
-                                                    <input class="form__input-checkbox" id="brend-4" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Пол4</span>
-                                                </label>
-                                                <label class="form__filter-label" for="brend-5">
-                                                    <input class="form__input-checkbox" id="brend-5" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Пол5</span>
-                                                </label>
+
+                                                <button class="form__filter-reset" type="reset">
+                                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="0.7">
+                                                            <path d="M1 0.5L14 13.5" stroke="#151515"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
+                                                            <path d="M14 0.5L1 13.5" stroke="#151515"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                    <span>Сбросить</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="accordion__item">
+                                    <div class="accordion__item accordion__item_show">
                                         <div class="accordion__header">
                                             <div class="form__filter-subtitle">Бренд</div>
                                         </div>
                                         <div class="accordion__body">
-                                            <div class="form__filter-row form__filter-brend">
-                                                <label class="form__filter-label" for="brend-1">
-                                                    <input class="form__input-checkbox" id="brend-1" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Бренд1</span>
+                                            <div class="form__filter-col">
+                                                <label class="decor__label decor__label-search" for="search">
+                                                    <button class="decor__search-btn" type="submit">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="0.5" clip-path="url(#clip0_63_505)">
+                                                                <path
+                                                                    d="M19.8265 18.98L14.9662 14.1197C16.27 12.6208 17.0593 10.6652 17.0593 8.52772C17.0593 3.82262 13.2323 0 8.53162 0C3.82652 0 0.00390625 3.82705 0.00390625 8.52772C0.00390625 13.2284 3.83096 17.0554 8.53162 17.0554C10.6691 17.0554 12.6247 16.2661 14.1236 14.9623L18.9839 19.8226C19.0992 19.9379 19.2545 20 19.4052 20C19.556 20 19.7112 19.9424 19.8265 19.8226C20.0571 19.592 20.0571 19.2106 19.8265 18.98ZM1.19681 8.52772C1.19681 4.48337 4.48728 1.19734 8.52719 1.19734C12.5715 1.19734 15.8576 4.4878 15.8576 8.52772C15.8576 12.5676 12.5715 15.8625 8.52719 15.8625C4.48728 15.8625 1.19681 12.5721 1.19681 8.52772Z"
+                                                                    fill="#6C6C6C" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_63_505">
+                                                                    <rect width="20" height="20" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </button>
+                                                    <input class="decor__input-search" id="search" type="search"
+                                                        placeholder="Введите название бренда...">
                                                 </label>
-                                                <label class="form__filter-label" for="brend-2">
-                                                    <input class="form__input-checkbox" id="brend-2" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Бренд2</span>
+
+                                                <label class="decor__label" for="brend1">
+                                                    <input class="decor__items-cheackbox decor__input-checkbox"
+                                                        id="brend1" type="checkbox">
+                                                    <span class="decor__input-checkbox-sqr"></span>
+                                                    <span class="decor__input-checkbox-text">Dolce & Gabbana</span>
                                                 </label>
-                                                <label class="form__filter-label" for="brend-3">
-                                                    <input class="form__input-checkbox" id="brend-3" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Бренд3</span>
+
+                                                <label class="decor__label" for="brend2">
+                                                    <input class="decor__items-cheackbox decor__input-checkbox"
+                                                        id="brend2" type="checkbox">
+                                                    <span class="decor__input-checkbox-sqr"></span>
+                                                    <span class="decor__input-checkbox-text">Dolce & Gabbana</span>
                                                 </label>
-                                                <label class="form__filter-label" for="brend-4">
-                                                    <input class="form__input-checkbox" id="brend-4" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Бренд4</span>
-                                                </label>
-                                                <label class="form__filter-label" for="brend-5">
-                                                    <input class="form__input-checkbox" id="brend-5" type="checkbox"
-                                                        name="check">
-                                                    <span class="form__filter-text">Бренд5</span>
+
+                                                <label class="decor__label" for="brend3">
+                                                    <input class="decor__items-cheackbox decor__input-checkbox"
+                                                        id="brend3" type="checkbox">
+                                                    <span class="decor__input-checkbox-sqr"></span>
+                                                    <span class="decor__input-checkbox-text">Dolce & Gabbana</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -444,6 +554,11 @@
                             <div class="catalog__product-box">
                                 <div class="catalog__product-panel">
                                     <span class="catalog__product-results">100 результатов</span>
+                                    <div class="catalog__product-panel-box">
+                                        <button class="catalog__product-panel-btn catalog__product-panel-sort"></button>
+                                        <button
+                                            class="catalog__product-panel-btn catalog__product-panel-filter"></button>
+                                    </div>
                                     <label class="favorite__form-label favorite__form-label-sort" for="sort">
                                         Сортировать:
                                         <select class="favorite__form-input favorite__form-input-arrow" id="sort">
@@ -452,8 +567,88 @@
                                         </select>
                                     </label>
                                 </div>
+
+                                <form class="sort" action="#">
+                                    <div class="filter__top-box">
+                                        <div class="filter__top-name">Сортировка</div>
+                                        <button class="sort-close"></button>
+                                    </div>
+                                    <div class="sort-box">
+                                        <label class="sort__label" for="min">
+                                            <span class="sort__text">Цена по убыванию</span>
+                                            <div class="sort__radio-box">
+                                                <input class="sort__radio" id="min" name="sort" type="radio">
+                                                <span class="sort__sqr"></span>
+                                            </div>
+                                        </label>
+
+                                        <label class="sort__label" for="max">
+                                            <span class="sort__text">Цена по возрастанию</span>
+                                            <div class="sort__radio-box">
+                                                <input class="sort__radio" id="max" name="sort" type="radio">
+                                                <span class="sort__sqr"></span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </form>
+
                                 <div class="catalog__product">
-                                    <div class="product__item">
+                                    <div class="product__items">
+                                        <div class="product__item-box">
+                                            <a class="product__img-link" href="#">
+                                                <img class="product__item-img" src="./images/goods/1.webp"
+                                                    alt="Product">
+                                            </a>
+                                            <div class="catalog__item-row">
+                                                <a class="favor-link product__favor-link" href="#">
+                                                    <svg width="26" height="24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                                            stroke="#000" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product__info">
+                                            <div class="product__title-box">
+                                                <h3 class="product__title">
+                                                    <a class="catalog__title-link" href="#">
+                                                        Kismet For Men (Lattafa)
+                                                    </a>
+                                                </h3>
+                                                <div class="product__category">Мужская парфюмерия</div>
+                                            </div>
+                                            <div class="product__price-box">
+                                                <div class="catalog__price">4 398<span>₸</span></div>
+                                                <div class="product__stock">В наличии</div>
+                                            </div>
+
+                                            <div class="product-quantity">
+                                                <button class="product-quantity__btn">
+                                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.5" y1="1" x2="15.5" y2="1" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                    </svg>
+                                                </button>
+                                                <div class="product-quantity__input">
+                                                    1
+                                                </div>
+                                                <button class="product-quantity__btn">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.5" y1="7.5" x2="15.5" y2="7.5" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                        <line x1="7.5" y1="15.5" x2="7.5" y2="0.5" stroke="#8932B4"
+                                                            stroke-width="2" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -487,7 +682,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -521,7 +716,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -555,41 +750,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="product__item">
-                                        <div class="product__item-box">
-                                            <a class="product__img-link" href="#">
-                                                <img class="product__item-img" src="./images/goods/1.webp"
-                                                    alt="Product">
-                                            </a>
-                                            <div class="catalog__item-row">
-                                                <a class="favor-link product__favor-link" href="#">
-                                                    <svg width="26" height="24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
-                                                            stroke="#000" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="product__info">
-                                            <div class="product__title-box">
-                                                <h3 class="product__title">
-                                                    <a class="catalog__title-link" href="#">
-                                                        Kismet For Men (Lattafa)
-                                                    </a>
-                                                </h3>
-                                                <div class="product__category">Мужская парфюмерия</div>
-                                            </div>
-                                            <div class="product__price-box">
-                                                <div class="catalog__price">4 398<span>₸</span></div>
-                                                <div class="product__stock">В наличии</div>
-                                            </div>
-                                            <button class="product__btn">В корзину</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="product__item">
+                                    <div class="product__items">
                                         <div class="product__item-box">
                                             <a class="product__img-link" href="#">
                                                 <img class="product__item-img" src="./images/goods/1.webp"
@@ -625,6 +786,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <a class="more__link" href="#">Показать еще</a>
 
                         <div class="pagination">
                             <a class="pagination__arrows pagination__arrows-next no-active" href="#">
@@ -681,26 +844,8 @@
                                 <h2 class="product__title-top">Вам может понравиться</h2>
                                 <div class="slider-btn-box">
                                     <div class="swiper-button-prev">
-                                        <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="-1" x2="19.5256" y2="-1"
-                                                transform="matrix(-0.768221 -0.640184 -0.768221 0.640185 15 25)"
-                                                stroke="#151515" stroke-width="2" />
-                                            <line y1="-1" x2="19.5256" y2="-1"
-                                                transform="matrix(-0.768221 0.640185 -0.768221 -0.640184 15 0)"
-                                                stroke="#151515" stroke-width="2" />
-                                        </svg>
                                     </div>
                                     <div class="swiper-button-next">
-                                        <svg width="17" height="25" viewBox="0 0 17 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="-1" x2="19.5256" y2="-1"
-                                                transform="matrix(0.768221 0.640185 0.768221 -0.640184 2 0)"
-                                                stroke="#151515" stroke-width="2" />
-                                            <line y1="-1" x2="19.5256" y2="-1"
-                                                transform="matrix(0.768221 -0.640184 0.768221 0.640185 2 25)"
-                                                stroke="#151515" stroke-width="2" />
-                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -1090,6 +1235,7 @@
         </footer>
     </main>
 
+    <script src="./js/catalog.js"></script>
     <script src="./js/accordion.js"></script>
     <script src="./js/main.min.js"></script>
 </body>

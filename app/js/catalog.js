@@ -15,18 +15,15 @@ sortClose.addEventListener('click', close);
 catalogFilter.addEventListener('click', function () {
     filterPopup.classList.add('active');
     overlayFilter.classList.add('active');
-
 });
 
 catalogSort.addEventListener('click', function () {
     sortPopup.classList.add('active');
     overlayFilter.classList.add('active');
-    document.body.style.overflow = 'hidden';
 });
 
 function close() {
     filterPopup.classList.remove('active');
     sortPopup.classList.remove('active');
     overlayFilter.classList.remove('active');
-    document.body.style.overflow = ' ';
 }
